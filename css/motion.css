@@ -1,0 +1,115 @@
+/* Animasi cadangan dan preferensi gerak yang dikurangi. */
+
+/* Booting Sequence (SRS §6.2) */
+
+/* Elemen hanya disembunyikan bila JS hidup; failsafe memaksanya tampil setelah 3 dtk. */
+.js .boot [data-reveal] {
+  opacity: 0;
+  animation: boot-failsafe var(--t-instant) var(--t-boot-failsafe) forwards;
+}
+
+.js .boot .boot__mask {
+  transform: translateY(105%);
+}
+
+.js .boot [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--t-reveal-opacity) var(--ease), transform var(--t-reveal-transform) var(--ease);
+}
+
+.boot.is-done [data-reveal],
+.boot-seen .boot [data-reveal] {
+  opacity: 1;
+  transform: none;
+  animation: none;
+  transition: none;
+}
+
+@keyframes boot-failsafe {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hanya elemen yang bergerak terus selama gulir; sisanya dibiarkan pada force3D GSAP. */
+.js .boot__line,
+.js .journey__list {
+  will-change: transform;
+}
+
+/* Kartu jejak: cadangan CSS bila GSAP tidak termuat */
+
+.trail__card--css {
+  animation: trail-life var(--t-trail-life) linear forwards;
+}
+
+@keyframes trail-life {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--tilt)) scale(0.6);
+  }
+  18% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(var(--tilt)) scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--tilt)) scale(1);
+  }
+}
+
+/* Petunjuk Menenun Waktu berdenyut halus saat diam. */
+.trail__hint span {
+  animation: hint-pulse var(--t-hint-pulse) ease-in-out infinite;
+}
+
+@keyframes hint-pulse {
+  50% {
+    opacity: 0.55;
+  }
+}
+
+/* Cap pos sertifikat (I-40) */
+
+.cert__postmark.is-stamped {
+  animation: stamp-in var(--t-stamp) cubic-bezier(.3, 1.4, .5, 1) both;
+}
+
+@keyframes stamp-in {
+  from {
+    opacity: 0;
+    transform: rotate(-24deg) scale(1.6);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-12deg) scale(1);
+  }
+}
+
+/* Preferensi gerak dikurangi */
+
+@media (prefers-reduced-motion: reduce) {
+  .js .boot [data-reveal],
+  .js .boot .boot__mask {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .cursor,
+  .boot__log p:last-child::after,
+  .trail__hint span,
+  .cert__postmark.is-stamped {
+    animation: none !important;
+  }
+
+  .thread-layer,
+  .btn {
+    transition: none !important;
+  }
+}

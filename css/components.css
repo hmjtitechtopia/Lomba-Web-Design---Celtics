@@ -1,0 +1,531 @@
+/**
+ * Komponen bersama: header, tombol, label, tag, siku, status strip, sel grid, footer.
+ * Penamaan BEM-lite (.blok, .blok__elemen, .blok--varian).
+ */
+
+/* ---------- Header global (SRS §4.5) ---------- */
+
+/* Header dihapus (revisi 1). Token --header-h tetap dipakai untuk padding halaman. */
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  padding: var(--sp-2) 0;
+  border-bottom: var(--line-hair) solid var(--c-void-soft);
+  font-family: var(--f-display);
+  font-size: clamp(2.25rem, 12vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.nav__link[aria-current="location"] {
+  color: var(--c-red);
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-3);
+  color: var(--c-concrete);
+}
+
+.steps[hidden] {
+  display: none;
+}
+
+.steps__item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-1) var(--sp-2);
+}
+
+.steps__num {
+  font-weight: 700;
+}
+
+.steps__item.is-active {
+  background: var(--c-red);
+  color: var(--c-ivory);
+}
+
+@media (min-width: 900px) {
+  .nav {
+    flex-direction: row;
+    gap: var(--sp-4);
+  }
+
+  .nav__link {
+    position: relative;
+    padding: 0;
+    border: 0;
+    font-family: var(--f-mono);
+    font-size: var(--fs-label);
+    letter-spacing: var(--ls-label);
+  }
+
+  .nav__link[aria-current="location"] {
+    color: inherit;
+  }
+
+  .nav__link[aria-current="location"]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: var(--sp-2);
+    height: var(--line-mid);
+    background: var(--c-red);
+  }
+}
+
+@media (min-width: 1200px) {
+  .steps__item:not(.is-active) .steps__label {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav__link:hover {
+    color: var(--c-red);
+  }
+}
+
+/* ---------- Tombol ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  min-height: var(--tap-min);
+  padding: 0 var(--sp-4);
+  border: var(--line-mid) solid currentColor;
+  border-radius: 0;
+  background: transparent;
+  font-family: var(--f-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: translate var(--t-press) linear, box-shadow var(--t-press) linear,
+    background-color var(--t-fast) linear, color var(--t-fast) linear;
+}
+
+.btn--primary {
+  min-height: var(--btn-h);
+  padding: 0 var(--sp-5);
+  border-color: var(--c-red);
+  background: var(--c-red);
+  color: var(--c-ivory);
+  box-shadow: var(--shadow-hard);
+}
+
+[data-tone="void"] .btn--primary {
+  box-shadow: 4px 4px 0 var(--c-brass);
+}
+
+/* I-01: tombol "ditekan" sejauh bayangan kerasnya. */
+.btn--primary:active {
+  translate: 4px 4px;
+  box-shadow: none;
+}
+
+.btn--outline {
+  background: transparent;
+}
+
+.btn--small {
+  min-height: 40px;
+  padding: 0 var(--sp-3);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+}
+
+.btn[aria-disabled="true"],
+.btn:disabled {
+  border-style: dashed;
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+  translate: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn--primary:not([aria-disabled="true"]):hover {
+    translate: -2px -2px;
+    box-shadow: 6px 6px 0 var(--c-void);
+  }
+
+  [data-tone="void"] .btn--primary:not([aria-disabled="true"]):hover {
+    box-shadow: 6px 6px 0 var(--c-brass);
+  }
+
+  .btn--outline:not(:disabled):not([aria-disabled="true"]):hover {
+    background: var(--c-void);
+    border-color: var(--c-void);
+    color: var(--c-paper);
+  }
+
+  [data-tone="void"] .btn--outline:not(:disabled):hover {
+    background: var(--c-ivory);
+    border-color: var(--c-ivory);
+    color: var(--c-void);
+  }
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+/* ---------- Label, tag, ornamen ---------- */
+
+.label {
+  font-family: var(--f-mono);
+  font-size: var(--fs-label);
+  font-weight: 400;
+  letter-spacing: var(--ls-label);
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: var(--c-brass-ink-small);
+}
+
+[data-tone="void"] .label {
+  color: var(--c-concrete);
+}
+
+.tag {
+  display: inline-block;
+  padding: var(--sp-1) var(--sp-2);
+  border: var(--line-hair) solid var(--c-brass);
+  font-family: var(--f-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: var(--c-brass-ink-small);
+}
+
+.rule {
+  height: 0;
+  margin: 0;
+  border: 0;
+  border-top: var(--line-hair) solid var(--c-brass);
+}
+
+.sep {
+  color: var(--c-brass);
+}
+
+/* Siku kuningan: dua siku lewat pseudo-elemen bingkai, dua lewat .frame__corners. */
+.frame {
+  position: relative;
+}
+
+.frame::before,
+.frame::after,
+.frame__corners::before,
+.frame__corners::after {
+  content: "";
+  position: absolute;
+  width: var(--corner);
+  height: var(--corner);
+  border: 0 solid var(--c-brass);
+  pointer-events: none;
+}
+
+.frame::before {
+  top: 0;
+  left: 0;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+.frame::after {
+  right: 0;
+  bottom: 0;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.frame__corners::before {
+  top: 0;
+  right: 0;
+  border-top-width: 1px;
+  border-right-width: 1px;
+}
+
+.frame__corners::after {
+  bottom: 0;
+  left: 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+/* ---------- Status strip (nilai nyata, SRS §4.6) ---------- */
+
+.status-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-4);
+  padding-top: var(--sp-2);
+  padding-bottom: var(--sp-2);
+  border-bottom: var(--line-hair) solid var(--c-brass);
+  font-family: var(--f-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--c-ash);
+}
+
+/* ---------- Banner informatif ---------- */
+
+.banner {
+  padding: var(--sp-3);
+  border: var(--line-mid) solid var(--c-void);
+  border-left-width: var(--line-bold);
+  background: var(--c-ivory);
+  color: var(--c-void);
+  font-family: var(--f-mono);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+
+/* ---------- Sel grid ---------- */
+
+.cell {
+  display: grid;
+  place-items: center;
+  min-width: var(--cell-min);
+  min-height: var(--cell-min);
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--c-void-soft);
+  color: var(--c-concrete);
+  font-family: var(--f-mono);
+  font-size: clamp(0.625rem, 1.6vw, 0.875rem);
+  line-height: 1;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.cell--on {
+  background: var(--c-red);
+  color: var(--c-ivory);
+}
+
+.cell:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: var(--focus-w) solid var(--c-ivory);
+  outline-offset: -3px;
+  box-shadow: 0 0 0 2px var(--c-void);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cell:hover {
+    box-shadow: inset 0 0 0 2px var(--c-brass);
+  }
+}
+
+/* ---------- Footer (SRS §15.5) ---------- */
+
+.site-footer {
+  padding-top: var(--sp-7);
+  padding-bottom: calc(var(--gap-group) + env(safe-area-inset-bottom));
+  background: var(--c-void);
+  color: var(--c-ivory);
+}
+
+.site-footer[data-tone="paper"] {
+  background: var(--c-paper);
+  color: var(--c-void);
+}
+
+.site-footer__wordmark {
+  font-family: var(--f-display);
+  font-size: clamp(3rem, 13vw, 11rem);
+  line-height: var(--lh-tight);
+  letter-spacing: 0.005em;
+}
+
+.site-footer__desc {
+  max-width: 46ch;
+  margin-top: var(--sp-5);
+  font-size: var(--fs-body);
+}
+
+.site-footer__telemetry {
+  display: grid;
+  gap: var(--sp-2);
+  margin-top: var(--sp-6);
+  padding: var(--sp-4);
+  border: var(--line-hair) solid var(--c-brass);
+  font-family: var(--f-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--c-concrete);
+}
+
+.site-footer[data-tone="paper"] .site-footer__telemetry {
+  color: var(--c-ash);
+}
+
+.site-footer__telemetry dt {
+  display: inline;
+}
+
+.site-footer__telemetry dd {
+  display: inline;
+  color: var(--c-ivory);
+}
+
+.site-footer[data-tone="paper"] .site-footer__telemetry dd {
+  color: var(--c-void);
+}
+
+.site-footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-top: var(--gap-group);
+  padding-top: var(--sp-4);
+  border-top: var(--line-hair) solid var(--c-brass);
+  font-family: var(--f-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  .site-footer__telemetry {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 760px;
+  }
+}
+
+/* ---------- Progres muat & lapisan benang ---------- */
+
+.nav-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: var(--z-progress);
+  height: 3px;
+  background: var(--c-red);
+  /* Progres gulir seluruh situs; diisi GSAP (home-sections.js), kosong tanpanya. */
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+}
+
+.thread-layer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: var(--z-thread);
+  width: var(--thread-w);
+  height: 100vh;
+  height: 100svh;
+  pointer-events: none;
+  transition: width var(--t-enter) var(--ease);
+}
+
+@media (min-width: 900px) {
+  .thread-layer.is-wide {
+    width: var(--thread-hero-w);
+  }
+}
+
+.thread-layer__svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.thread__fibers {
+  clip-path: inset(0 0 calc(100% - var(--front, 0px)) 0);
+  transform-box: view-box;
+}
+
+.thread__fiber {
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.thread__fiber--red {
+  stroke: var(--c-red);
+}
+
+.thread__fiber--brass {
+  stroke: var(--c-brass);
+}
+
+.thread__digit {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  text-anchor: middle;
+  fill: var(--c-ash);
+}
+
+.thread__digit--one {
+  fill: var(--c-red);
+}
+
+.thread__shuttle {
+  fill: var(--c-brass);
+  transition: opacity 0.25s linear;
+}
+
+.thread__complete {
+  position: absolute;
+  right: 6px;
+  bottom: 24px;
+  writing-mode: vertical-rl;
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--c-ash);
+  opacity: 0;
+}
+
+.thread-layer.is-complete .thread__complete {
+  opacity: 1;
+}
+
+.thread-layer.is-complete .thread__shuttle {
+  opacity: 0;
+}
+
+.no-js .thread-layer,
+.no-gsap .thread-layer {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thread-layer,
+  .thread__shuttle {
+    transition: none;
+  }
+}

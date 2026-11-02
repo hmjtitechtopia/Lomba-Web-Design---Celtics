@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 240" width="180" height="240">
+  <title>Belah ketupat benang emas</title>
+  <defs>
+    <pattern id="t" width="30" height="30" patternUnits="userSpaceOnUse">
+      <rect width="30" height="30" fill="#0D0D0D"/>
+      <path d="M15 3 L27 15 L15 27 L3 15 Z" fill="none" stroke="#C4A661" stroke-width="2"/>
+      <path d="M15 11 L19 15 L15 19 L11 15 Z" fill="#D91604"/>
+    </pattern>
+  </defs>
+  <rect width="180" height="240" fill="url(#t)"/>
+</svg>

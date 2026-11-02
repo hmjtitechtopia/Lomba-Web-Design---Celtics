@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 240" width="180" height="240">
+  <title>Kepar patah</title>
+  <defs>
+    <pattern id="t" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="#F5F2EB"/>
+      <path d="M0 24 L12 0 M12 0 L24 24" fill="none" stroke="#0D0D0D" stroke-width="3"/>
+      <path d="M0 12 L6 0 M18 0 L24 12" fill="none" stroke="#D91604" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="180" height="240" fill="url(#t)"/>
+</svg>

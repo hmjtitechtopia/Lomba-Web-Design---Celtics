@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 240" width="180" height="240">
+  <title>Register biner</title>
+  <defs>
+
+  </defs>
+  <rect width="180" height="240" fill="#0D0D0D"/>
+  <text x="18" y="32" fill="#F5F2EB" font-family="monospace" font-size="15" letter-spacing="3">10110010</text>
+  <text x="18" y="51" fill="#C4A661" font-family="monospace" font-size="15" letter-spacing="3">01001101</text>
+  <text x="18" y="70" fill="#F5F2EB" font-family="monospace" font-size="15" letter-spacing="3">11100011</text>
+  <text x="18" y="89" fill="#C4A661" font-family="monospace" font-size="15" letter-spacing="3">00011100</text>
+  <text x="18" y="108" fill="#F5F2EB" font-family="monospace" font-size="15" letter-spacing="3">10101010</text>
+  <text x="18" y="127" fill="#C4A661" font-family="monospace" font-size="15" letter-spacing="3">01010101</text>
+  <text x="18" y="146" fill="#F5F2EB" font-family="monospace" font-size="15" letter-spacing="3">11001100</text>
+  <text x="18" y="165" fill="#C4A661" font-family="monospace" font-size="15" letter-spacing="3">00110011</text>
+  <text x="18" y="184" fill="#F5F2EB" font-family="monospace" font-size="15" letter-spacing="3">10011001</text>
+  <text x="18" y="203" fill="#C4A661" font-family="monospace" font-size="15" letter-spacing="3">01100110</text>
+  <text x="18" y="222" fill="#F5F2EB" font-family="monospace" font-size="15" letter-spacing="3">11110000</text>
+</svg>

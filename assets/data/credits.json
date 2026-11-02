@@ -1,0 +1,48 @@
+{
+  "proyek": "Sandi Leluhur: Mesin Biner Pertama",
+  "versi": "1.1",
+  "diperbarui": "2026-10-25",
+  "aset": [
+    {
+      "id": "A-01",
+      "nama": "Ilustrasi kartu jejak (10 tekstur tenun, SVG)",
+      "kategori": "Ilustrasi",
+      "sumber": "Ilustrasi generatif, dibuat khusus untuk proyek ini",
+      "lisensi": "Karya orisinal",
+      "berkas": "assets/img/tenun-01.svg … tenun-10.svg"
+    },
+    {
+      "id": "A-02",
+      "nama": "Skematik alat tenun terurai (SVG)",
+      "kategori": "Ilustrasi",
+      "sumber": "Digambar khusus untuk proyek ini",
+      "lisensi": "Karya orisinal",
+      "berkas": "index.html, section #arsip (SVG inline)"
+    },
+    {
+      "id": "A-03",
+      "nama": "Benang sepanjang situs (SVG generatif)",
+      "kategori": "Ilustrasi",
+      "sumber": "Digambar oleh kode proyek ini",
+      "lisensi": "Karya orisinal",
+      "berkas": "js/features/thread.js"
+    },
+    {
+      "id": "A-04",
+      "nama": "Matriks motif 12 × 12",
+      "kategori": "Data",
+      "sumber": "Dibuat pengunjung, disimpan di perangkatnya",
+      "lisensi": "Milik pengunjung",
+      "berkas": "localStorage: sandi_leluhur_data"
+    }
+  ],
+  "font": [
+    { "id": "A-05", "nama": "Fon Anton", "sumber": "The Anton Project Authors", "lisensi": "SIL OFL 1.1", "tautan": "https://github.com/googlefonts/AntonFont" },
+    { "id": "A-06", "nama": "Fon Playfair Display", "sumber": "The Playfair Display Project Authors", "lisensi": "SIL OFL 1.1", "tautan": "https://github.com/clauseggers/Playfair-Display" },
+    { "id": "A-07", "nama": "Fon JetBrains Mono", "sumber": "The JetBrains Mono Project Authors", "lisensi": "SIL OFL 1.1", "tautan": "https://github.com/JetBrains/JetBrainsMono" }
+  ],
+  "pustaka": [
+    { "id": "A-08", "nama": "GSAP 3.12.5 + ScrollTrigger", "sumber": "GreenSock, gsap.com", "lisensi": "GSAP Standard License", "tautan": "https://gsap.com/standard-license" },
+    { "id": "A-09", "nama": "Lenis 1.1.13", "sumber": "darkroom.engineering", "lisensi": "MIT", "tautan": "https://github.com/darkroomengineering/lenis" }
+  ]
+}

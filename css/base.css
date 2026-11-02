@@ -1,0 +1,244 @@
+/* Font lokal, reset, tipografi, dan aksesibilitas dasar. */
+
+@font-face {
+  font-family: "Anton";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/anton-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/playfair-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("../assets/fonts/playfair-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/jetbrains-mono-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/jetbrains-mono-700.woff2") format("woff2");
+}
+
+/*
+ * Font cadangan yang lebarnya disamakan dengan font asli (size-adjust diukur
+ * dari teks contoh), supaya saat font asli selesai dimuat baris teks tidak
+ * berpindah dan tidak terjadi layout shift.
+ */
+@font-face {
+  font-family: "Anton Fallback";
+  src: local("Impact");
+  size-adjust: 95.8%;
+}
+
+@font-face {
+  font-family: "Playfair Fallback";
+  src: local("Georgia");
+  size-adjust: 96.6%;
+}
+
+@font-face {
+  font-family: "Playfair Fallback";
+  font-style: italic;
+  src: local("Georgia Italic"), local("Georgia-Italic");
+  size-adjust: 93.9%;
+}
+
+@font-face {
+  font-family: "JetBrains Mono Fallback";
+  src: local("Consolas");
+  size-adjust: 109.1%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Latar gelap menjaga warna kanvas saat awal pemuatan. */
+html {
+  color: var(--c-ivory);
+  text-size-adjust: 100%;
+  background: var(--c-void);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Aturan kompatibilitas Lenis lama; tidak aktif tanpa class dari integrasi tersebut. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow-x: clip;
+  font-family: var(--f-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  background: var(--c-void);
+}
+
+h1,
+h2,
+h3,
+p,
+ol,
+ul,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Paragraf tidak pernah lebih lebar dari satu baris baca yang nyaman. */
+p {
+  max-width: var(--measure);
+}
+
+ol,
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  color: var(--c-ivory);
+  background: var(--c-red);
+}
+
+/* Fokus: Void di latar terang, Ivory di latar gelap. Brass tidak lulus 3:1. */
+:focus-visible {
+  outline: var(--focus-w) solid var(--c-void);
+  outline-offset: var(--focus-offset);
+}
+
+[data-tone="void"] :focus-visible {
+  outline-color: var(--c-ivory);
+}
+
+[data-tone="paper"] :focus-visible {
+  outline-color: var(--c-void);
+}
+
+.skip-link {
+  position: fixed;
+  top: var(--sp-2);
+  left: var(--sp-2);
+  z-index: var(--z-skip);
+  padding: var(--sp-2) var(--sp-3);
+  color: var(--c-void);
+  font-family: var(--f-mono);
+  font-size: var(--fs-small);
+  background: var(--c-ivory);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+.sr-only,
+.is-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: var(--sp-sr-offset);
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+main {
+  display: block;
+  /* Kanvas konten tetap setinggi viewport, termasuk ketika isinya pendek. */
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+main:focus {
+  outline: none;
+}
+
+main h1:focus {
+  outline: none;
+}
+
+main h1:focus-visible {
+  outline: var(--focus-w) solid currentColor;
+  outline-offset: var(--focus-offset-heading);
+}
+
+/* Wadah konten: sisi kanan memberi ruang untuk benang agar tidak menimpa teks. */
+.wrap {
+  padding-left: var(--margin-x);
+  padding-right: max(var(--margin-x), calc(var(--thread-w) + var(--thread-gap)));
+}
+
+[hidden] {
+  display: none;
+}

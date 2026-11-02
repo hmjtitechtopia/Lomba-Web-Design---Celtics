@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta name="color-scheme" content="only light">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <title>MenenunSejarah: Mesin Biner Pertama</title>
+  <meta name="description" content="Komputer pertama ditenun, bukan ditulis. Pahami tenun Nusantara sebagai mesin biner, programkan motifmu, lalu dukung pengrajinnya.">
+  <meta name="theme-color" content="#0D0D0D">
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/mobile.css" media="(width < 900px)">
+  <link rel="stylesheet" href="css/arsip-mobile.css">
+  <link rel="preload" href="assets/fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/playfair-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    document.documentElement.classList.replace('no-js', 'js');
+    try { if (sessionStorage.getItem('sl_boot_seen') === '1') document.documentElement.classList.add('boot-seen'); } catch (e) {}
+  </script>
+</head>
+<body data-page="home" data-step="1" data-tone="void" data-footer-tone="void">
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+
+  <div class="nav-progress" id="nav-progress" aria-hidden="true"></div>
+  <div class="thread-layer" id="thread-layer" aria-hidden="true">
+    <svg class="thread-layer__svg" id="thread-svg" focusable="false"></svg>
+  </div>
+  <div class="sr-only" id="sr-status" aria-live="polite"></div>
+
+  <main id="konten" tabindex="-1">
+
+    <div class="page-section" id="beranda" data-section="beranda" data-step="1">
+      <section class="boot" data-tone="void" aria-labelledby="judul-boot">
+        <div class="boot__text">
+
+          <h1 class="boot__title" id="judul-boot">
+            <span class="boot__line"><span class="boot__mask" data-reveal>KOMPUTER</span></span>
+            <span class="boot__line"><span class="boot__mask" data-reveal>PERTAMA</span></span>
+            <span class="boot__line"><span class="boot__mask" data-reveal>DITENUN,</span></span>
+            <span class="boot__line"><span class="boot__mask" data-reveal>BUKAN DITULIS</span></span>
+          </h1>
+
+
+          <p class="boot__lead" data-reveal="lead">Naik atau turun. Satu atau nol. Pada helai lungsi, leluhur kita menyimpan sebuah bahasa, jauh sebelum ada layar.</p>
+
+          <div class="boot__action" data-reveal="cta">
+            <a class="btn btn--primary" href="#playground">MULAI MENENUN →</a>
+          </div>
+
+          <div class="boot__foot" data-reveal="rest">
+            <a class="boot__scroll" href="#menenun-waktu">GULIR ↓</a>
+          </div>
+        </div>
+
+        <button class="boot__skip" type="button" hidden>LEWATI</button>
+      </section>
+
+      <section class="trail" id="menenun-waktu" data-tone="paper" aria-labelledby="judul-trail">
+        <div class="trail__head">
+          <p class="trail__hint">KETUK ATAU SERET DI AREA INI</p>
+        </div>
+
+        <div class="trail__side trail__side--past">
+          <p class="trail__era trail__era--past">Masa Lalu</p>
+          <p class="trail__note">serat · pamor · benang emas</p>
+        </div>
+        <div class="trail__side trail__side--future">
+          <p class="trail__era">Masa Depan</p>
+          <p class="trail__note">kode · biner · mesin</p>
+        </div>
+
+        <div class="trail__layer" aria-hidden="true"></div>
+
+        <div class="trail__strip">
+          <span>MenenunSejarah // EDISI ARSIP PRESERVASI</span>
+          <span>KODIFIKASI BINER NUSANTARA</span>
+        </div>
+      </section>
+
+      <section class="journey" id="peta" data-tone="void" aria-labelledby="judul-peta">
+        <div class="journey__inner wrap">
+          <div class="journey__head">
+            <p class="label" data-anim="fade">[ PETA PERJALANAN // 4 LANGKAH + KREDIT ]</p>
+            <h2 class="journey__title" id="judul-peta" data-split>Dari serat ke sandi, dalam empat langkah.</h2>
+          </div>
+          <ol class="journey__list">
+            <li class="journey__item">
+              <a class="journey__link" href="#menenun-waktu">
+                <span class="journey__line" aria-hidden="true"></span>
+                <span class="journey__num">01</span>
+                <span class="journey__name">Temukan</span>
+                <span class="journey__desc">Tenun masa lalu ke masa depan dengan kursormu.</span>
+                <span class="journey__go" aria-hidden="true">↓</span>
+              </a>
+            </li>
+            <li class="journey__item">
+              <a class="journey__link" href="#arsip">
+                <span class="journey__line" aria-hidden="true"></span>
+                <span class="journey__num">02</span>
+                <span class="journey__name">Pahami</span>
+                <span class="journey__desc">Urai alat tenun dan baca logika naik-turunnya.</span>
+                <span class="journey__go" aria-hidden="true">↓</span>
+              </a>
+            </li>
+            <li class="journey__item">
+              <a class="journey__link" href="#playground">
+                <span class="journey__line" aria-hidden="true"></span>
+                <span class="journey__num">03</span>
+                <span class="journey__name">Tenun</span>
+                <span class="journey__desc">Programkan motif 12 × 12 dalam 0 dan 1.</span>
+                <span class="journey__go" aria-hidden="true">↓</span>
+              </a>
+            </li>
+            <li class="journey__item">
+              <a class="journey__link" href="#dampak">
+                <span class="journey__line" aria-hidden="true"></span>
+                <span class="journey__num">04</span>
+                <span class="journey__name">Lestarikan</span>
+                <span class="journey__desc">Jadikan motifmu piagam, lalu dukung pengrajinnya.</span>
+                <span class="journey__go" aria-hidden="true">↓</span>
+              </a>
+            </li>
+            <li class="journey__item journey__item--minor">
+              <a class="journey__link" href="#kredit">
+                <span class="journey__line" aria-hidden="true"></span>
+                <span class="journey__num">05</span>
+                <span class="journey__name">Kredit</span>
+                <span class="journey__desc">Batas analogi, sumber sejarah, dan atribusi aset.</span>
+                <span class="journey__go" aria-hidden="true">↓</span>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-section" id="arsip" data-section="arsip" data-step="2">
+      <section class="arsip" id="arsip-stage" data-tone="paper" aria-labelledby="judul-arsip">
+        <div class="arsip__inner wrap">
+          <div class="arsip__visual">
+            <h2 class="label arsip__eyebrow" id="judul-arsip">[ ARSIP SANDI // ANATOMI ALAT TENUN ]</h2>
+            <figure class="loom frame" data-anim="mask">
+              <span class="frame__corners" aria-hidden="true"></span>
+              <svg class="loom__svg" viewBox="0 -40 800 720" role="img" aria-labelledby="loom-title loom-desc">
+                <title id="loom-title">Alat tenun terurai menjadi empat bagian</title>
+                <desc id="loom-desc">Penggulung lungsi di atas, benang lungsi merah terentang ke bawah melewati sisir, lalu berakhir pada gulungan kain hasil tenunan.</desc>
+                <defs>
+                  <pattern id="anyaman" width="12" height="12" patternUnits="userSpaceOnUse">
+                    <rect width="12" height="12" class="loom__cloth-base"/>
+                    <rect width="6" height="6" class="loom__cloth-bit"/>
+                    <rect x="6" y="6" width="6" height="6" class="loom__cloth-bit"/>
+                  </pattern>
+                </defs>
+
+                <g id="lungsi" class="loom__part" data-part-group="lungsi">
+                  <path class="loom__warp" d="
+                    M200 130 V470  M224 130 V470  M248 130 V470  M272 130 V470
+                    M296 130 V470  M320 130 V470  M344 130 V470  M368 130 V470
+                    M392 130 V470  M416 130 V470  M440 130 V470  M464 130 V470
+                    M488 130 V470  M512 130 V470  M536 130 V470  M560 130 V470"/>
+                  <path class="loom__label-line" pathLength="1" d="M560 330 H636"/>
+                  <text class="loom__label" x="644" y="334">LUNGSI (WARP)</text>
+                </g>
+
+                <g id="penggulung-lungsi" class="loom__part" data-part-group="penggulung-lungsi">
+                  <rect class="loom__beam" x="170" y="92" width="420" height="38" rx="19"/>
+                  <rect class="loom__cap" x="150" y="84" width="22" height="54"/>
+                  <rect class="loom__cap" x="588" y="84" width="22" height="54"/>
+                  <path class="loom__wind" d="
+                    M210 96 V126  M250 96 V126  M290 96 V126  M330 96 V126
+                    M370 96 V126  M410 96 V126  M450 96 V126  M490 96 V126  M530 96 V126"/>
+                  <path class="loom__label-line" pathLength="1" d="M170 111 H116 V64"/>
+                  <text class="loom__label" x="40" y="54">PENGGULUNG LUNGSI</text>
+                </g>
+
+                <g id="sisir" class="loom__part" data-part-group="sisir">
+                  <rect class="loom__reed" x="180" y="244" width="400" height="44"/>
+                  <path class="loom__teeth" d="
+                    M192 248 V284  M204 248 V284  M216 248 V284  M228 248 V284  M240 248 V284
+                    M252 248 V284  M264 248 V284  M276 248 V284  M288 248 V284  M300 248 V284
+                    M312 248 V284  M324 248 V284  M336 248 V284  M348 248 V284  M360 248 V284
+                    M372 248 V284  M384 248 V284  M396 248 V284  M408 248 V284  M420 248 V284
+                    M432 248 V284  M444 248 V284  M456 248 V284  M468 248 V284  M480 248 V284
+                    M492 248 V284  M504 248 V284  M516 248 V284  M528 248 V284  M540 248 V284
+                    M552 248 V284  M564 248 V284"/>
+                  <path class="loom__label-line" pathLength="1" d="M180 266 H90 V238"/>
+                  <text class="loom__label" x="16" y="226">SISIR (REED)</text>
+                </g>
+
+                <g id="gulungan-kain" class="loom__part" data-part-group="gulungan-kain">
+                  <rect class="loom__cloth" x="190" y="380" width="380" height="90" fill="url(#anyaman)"/>
+                  <rect class="loom__beam" x="170" y="470" width="420" height="38" rx="19"/>
+                  <rect class="loom__cap" x="150" y="462" width="22" height="54"/>
+                  <rect class="loom__cap" x="588" y="462" width="22" height="54"/>
+                  <path class="loom__label-line" pathLength="1" d="M590 489 H636 V560"/>
+                  <text class="loom__label" x="560" y="584">GULUNGAN KAIN</text>
+                </g>
+              </svg>
+            </figure>
+          </div>
+
+          <div class="arsip__copy">
+            <div class="arsip__markers" role="group" aria-label="Lompat ke bagian alat tenun">
+              <button class="arsip__marker" type="button" data-target="lungsi">01 LUNGSI</button>
+              <button class="arsip__marker" type="button" data-target="penggulung-lungsi">02 PENGGULUNG</button>
+              <button class="arsip__marker" type="button" data-target="sisir">03 SISIR</button>
+              <button class="arsip__marker" type="button" data-target="gulungan-kain">04 KAIN</button>
+            </div>
+
+            <div class="arsip__parts">
+              <article class="part" data-part="lungsi">
+                <h2 class="part__title">LUNGSI = 0 / 1</h2>
+                <p class="part__body">Benang lungsi yang terangkat membentuk logika biner murni: status '1' saat terangkat dan '0' saat diturunkan. Dari selang-seling inilah barisan tenun dieksekusi baris demi baris layaknya <em>punched card</em> sebelum era komputasi modern.</p>
+                <p class="part__register">REGISTER BINER // [ 1 0 1 1 0 0 1 0 ] · 8-BIT PER BARIS WEFT</p>
+              </article>
+              <article class="part" data-part="penggulung-lungsi">
+                <h2 class="part__title">PENGGULUNG = MEMORI</h2>
+                <p class="part__body">Penggulung lungsi menampung ratusan helai benang yang belum ditenun. Seperti memori, ia menyimpan bahan mentah yang dibaca satu baris setiap kali pakan dilempar.</p>
+                <p class="part__register">REGISTER BINER // [ 0 0 0 0 0 0 0 0 ] · BARIS YANG BELUM DIBACA</p>
+              </article>
+              <article class="part" data-part="sisir">
+                <h2 class="part__title">SISIR = EKSEKUSI</h2>
+                <p class="part__body">Setiap hentakan sisir merapatkan satu baris pakan ke kain. Satu hentakan, satu baris selesai, mirip detak jam yang memberi tanda bahwa instruksi berikutnya boleh dijalankan.</p>
+                <p class="part__register">REGISTER BINER // [ 1 0 1 0 1 0 1 0 ] · SATU HENTAKAN, SATU BARIS</p>
+              </article>
+              <article class="part" data-part="gulungan-kain">
+                <h2 class="part__title">KAIN = KELUARAN</h2>
+                <p class="part__body">Kain yang tergulung adalah hasil program: deretan keputusan naik dan turun yang kini terbaca sebagai motif. Baca kain dari bawah ke atas, dan kamu membaca kodenya.</p>
+                <p class="part__register">REGISTER BINER // [ 1 1 0 0 1 1 0 0 ] · KELUARAN TERSIMPAN</p>
+              </article>
+            </div>
+
+            <div class="arsip__year">
+              <p class="arsip__year-num" aria-hidden="true">1804</p>
+              <p class="sr-only">Perkiraan tahun 1804</p>
+              <p class="arsip__year-note">≈ 1804 · KARTU BERLUBANG JACQUARD</p>
+            </div>
+
+            <a class="btn btn--primary arsip__cta" href="#playground">UJI LOGIKA DI PLAYGROUND →</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-section" id="playground" data-section="playground" data-step="3">
+      <section class="pg wrap" data-tone="paper" aria-labelledby="judul-pg">
+        <div class="pg__canvas">
+          <p class="label pg__eyebrow">KODIFIKASI BINER <span class="sep" aria-hidden="true">❖</span> PRIMER TENUN • MATRIKS <span data-out="bits">144</span>-BIT</p>
+          <h2 class="pg__title" id="judul-pg" data-split>PROGRAM MOTIFMU</h2>
+          <p class="pg__lead" data-anim="fade">0 = benang turun (pakan terbenam), 1 = benang naik (lungsi timbul) — rekonstruksi geometri songket biner.</p>
+
+          <p class="banner pg__nojs">Kanvas biner butuh JavaScript. Nyalakan JavaScript untuk memprogram motif.</p>
+
+          <div class="pg__board">
+            <div class="pg__board-head">
+              <p class="label pg__board-title">KANVAS BINER 12×12 <span class="tag">BENANG EMAS</span></p>
+              <p class="label pg__cursor" aria-hidden="true">KURSOR: <span data-out="kursor">—</span></p>
+            </div>
+            <div class="pg__viewport" tabindex="0" role="region" aria-label="Kanvas dan koordinat; gulir mendatar bila diperlukan">
+            <div class="pg__frame frame" data-anim="mask">
+              <span class="frame__corners" aria-hidden="true"></span>
+              <div class="pg__ruler" aria-hidden="true"></div>
+              <div class="pg__row-labels" aria-hidden="true"></div>
+              <div class="pg__grid" role="grid" aria-label="Kanvas biner 12 kali 12. Panah untuk berpindah sel, Spasi atau Enter untuk mengubah nilai."></div>
+            </div>
+            </div>
+            <p class="pg__legend">Klik sel matriks untuk mengubah orientasi lungsi emas (1) dan pakan terbenam (0).</p>
+            <p class="pg__empty-hint">0 = benang turun, 1 = benang naik</p>
+          </div>
+        </div>
+
+        <div class="pg__panel">
+          <p class="label">[ KURATORIAL // KORPUS 03 ]</p>
+          <h2 class="pg__panel-title">Petunjuk Penenun &amp; Arsip Register</h2>
+          <p class="pg__panel-intro">Koleksi rekaman biner Nusantara. Pola dasar: belah ketupat 12-bit dengan serat emas timbul.</p>
+
+          <p class="banner" data-banner="storage" role="status" hidden>Penyimpanan perangkat tidak tersedia (mode privat?). Motifmu tetap tersimpan selama sesi ini, tetapi hilang bila halaman dimuat ulang.</p>
+
+          <div class="readout" aria-label="Register biner per baris">
+            <div class="readout__head label" aria-hidden="true">
+              <span>BARIS · SEKUENS (PAKAN)</span>
+              <span>HEX DUMP</span>
+            </div>
+            <ol class="readout__list"></ol>
+            <dl class="readout__summary">
+              <div><dt>BENANG NAIK (1):</dt> <dd data-out="naik">0</dd></div>
+              <div><dt>BENANG TURUN (0):</dt> <dd data-out="turun">144</dd></div>
+              <div><dt>KERAPATAN:</dt> <dd data-out="kerapatan">0.0%</dd></div>
+            </dl>
+          </div>
+
+          <div class="pg__controls" role="group" aria-label="Transformasi matriks">
+            <button class="btn btn--outline btn--small" type="button" data-action="tenun">TENUN</button>
+            <button class="btn btn--outline btn--small" type="button" data-action="bersihkan">BERSIHKAN</button>
+            <button class="btn btn--outline btn--small" type="button" data-action="balik">BALIK</button>
+            <button class="btn btn--outline btn--small" type="button" data-action="acak">ACAK</button>
+            <button class="btn btn--outline btn--small" type="button" data-action="cermin">CERMIN</button>
+            <button class="btn btn--outline btn--small" type="button" data-action="undo" aria-keyshortcuts="Control+Z">UNDO</button>
+            <button class="btn btn--outline btn--small" type="button" data-action="redo" aria-keyshortcuts="Control+Shift+Z">REDO</button>
+          </div>
+
+          <div class="pg__presets" role="group" aria-labelledby="label-preset">
+            <p class="label" id="label-preset">PRESET GEOMETRIS</p>
+            <button class="btn btn--outline btn--small" type="button" data-action="preset" data-preset="belah-ketupat">BELAH KETUPAT</button>
+            <button class="btn btn--outline btn--small" type="button" data-action="preset" data-preset="zigzag">ZIGZAG</button>
+            <button class="btn btn--outline btn--small" type="button" data-action="preset" data-preset="papan-catur">PAPAN CATUR</button>
+            <button class="btn btn--outline btn--small" type="button" data-action="preset" data-preset="silang">SILANG</button>
+          </div>
+
+          <div class="pg__owner">
+            <label class="label" for="nama-penjaga">NAMA PENJAGA (OPSIONAL)</label>
+            <input class="pg__input" id="nama-penjaga" name="nama" type="text" maxlength="32" autocomplete="name" placeholder="Contoh: Dewi Lestari">
+          </div>
+
+          <a class="btn btn--primary pg__cta" href="#dampak" data-action="simpan">[ SIMPAN &amp; LIHAT SERTIFIKAT → ]</a>
+          <p class="pg__trust">Gratis · tanpa akun · motif tersimpan di perangkatmu saja</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-section" id="dampak" data-section="dampak" data-step="4">
+      <div class="dampak" data-tone="paper">
+        <div class="catalog wrap">
+          <p class="catalog__name">MenenunSejarah <span aria-hidden="true">|</span> Katalog Monolitik Komputasi Biner Nusantara</p>
+          <p class="catalog__tags"><span class="tag">KORPUS ED-01</span> <span class="tag">© 2026 PRESERVASI TERBUKA</span></p>
+        </div>
+        <div class="status-strip wrap" aria-label="Status sistem">
+          <span data-out="sys">SYS_LITE</span>
+          <span>CHKSUM: <span data-out="chk16">—</span></span>
+        </div>
+
+        <section class="dampak__empty wrap" data-state="empty" aria-labelledby="judul-kosong">
+          <p class="label">[ EPILOG // PIAGAM PENJAGA PUSAKA ]</p>
+          <h2 class="dampak__empty-title" id="judul-kosong" data-split>PIAGAMMU MENUNGGU MOTIF PERTAMAMU</h2>
+          <p class="dampak__empty-lead" data-anim="fade">Tenun satu motif dalam 0 dan 1, dan piagam Penjaga Pusaka langsung jadi.</p>
+          <a class="btn btn--primary" href="#playground">MULAI MENENUN →</a>
+        </section>
+
+        <section class="dampak__ready wrap" data-state="ready" aria-labelledby="judul-piagam" hidden>
+          <div class="dampak__intro">
+            <h2 class="label dampak__eyebrow" id="judul-piagam">[ EPILOG // PIAGAM PENJAGA PUSAKA ] :: [ NO. <span data-out="nomor">—</span> ]</h2>
+            <p class="dampak__lead">Motif yang kamu tenun kini punya piagam. Simpan, bagikan, lalu dukung pengrajin yang menenun sungguhan.</p>
+          </div>
+
+          <div class="dampak__grid">
+            <article class="cert" aria-label="Sertifikat Penjaga Pusaka">
+              <div class="cert__head">
+                <span>KODEKS PRESERVASI NUSANTARA</span>
+                <span>LEMBAR PIAGAM DIGITAL</span>
+              </div>
+
+              <div class="cert__body">
+                <div class="cert__main">
+                  <h2 class="cert__title">PENJAGA PUSAKA</h2>
+                  <p class="cert__quote">Dengan ini menenun masa lalu ke masa depan.</p>
+                  <p class="cert__block"><span class="tag">[ BLOK: <span data-out="blok">MATRIKS-SONGKET-12</span> ]</span></p>
+                  <p class="cert__code">KODE MOTIF: <span data-out="kode">—</span> // MenenunSejarah</p>
+                </div>
+
+                <div class="cert__post">
+                  <figure class="cert__stamp">
+                    <svg class="cert__stamp-grid" viewBox="0 0 12 12" role="img" aria-label="Motif binermu" shape-rendering="crispEdges"></svg>
+                    <figcaption>POS PUSAKA // <span data-out="ukuran">12 × 12</span><br>ARSIP BINER</figcaption>
+                  </figure>
+                  <p class="cert__postmark" aria-label="Tanggal cap">
+                    <span>MenenunSejarah</span>
+                    <span class="cert__postmark-date" data-out="tanggal">—</span>
+                    <span>TERCAP</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="cert__terminal">
+                <p class="cert__terminal-head">TERMINAL REKAMAN // NODE: PERANGKAT-INI</p>
+                <dl>
+                  <div><dt>NAMA PENJAGA</dt> <dd data-out="nama">—</dd></div>
+                  <div><dt>ID MOTIF</dt> <dd data-out="id">—</dd></div>
+                  <div><dt>MOTIF BINER</dt> <dd><ol class="cert__rows" data-out="baris"></ol></dd></div>
+                  <div><dt>CHECKSUM (FNV-1A)</dt> <dd data-out="checksum">—</dd></div>
+                </dl>
+              </div>
+
+              <div class="cert__foot">
+                <span class="cert__seal" aria-hidden="true">SL<br>2026</span>
+                <div>
+                  <p class="cert__brand">[ MenenunSejarah · TECHTOPIA VOL. 2 ]</p>
+                  <p class="cert__team" data-team></p>
+                </div>
+                <p class="cert__note">Piagam simbolis, bukan dokumen resmi.</p>
+              </div>
+            </article>
+
+            <aside class="dampak__actions" aria-label="Aksi piagam">
+              <button class="btn btn--primary" type="button" data-partner disabled>[ DUKUNG PENGRAJIN → ]</button>
+              <p class="dampak__partner" data-partner-line>Kanal mitra belum ditetapkan.</p>
+
+              <div class="dampak__buttons">
+                <button class="btn btn--outline" type="button" data-action="unduh">UNDUH PNG</button>
+                <button class="btn btn--outline" type="button" data-action="bagikan">BAGIKAN SERTIFIKAT</button>
+                <a class="btn btn--outline" href="#playground">TENUN ULANG (PLAYGROUND)</a>
+              </div>
+              <p class="dampak__message" data-out="pesan" role="status"></p>
+
+              <dl class="dampak__summary">
+                <div><dt>MOTIF:</dt> <dd><span data-out="ukuran">12 × 12</span> · <span data-out="naik">0</span> NAIK · <span data-out="turun">0</span> TURUN</dd></div>
+                <div><dt>TERSIMPAN:</dt> <dd data-out="lokasi">DI PERANGKAT INI</dd></div>
+                <div><dt>CHECKSUM</dt> <dd data-out="checksum">—</dd></div>
+              </dl>
+            </aside>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="page-section" id="kredit" data-section="kredit" data-step="0">
+      <div class="kredit" data-tone="paper">
+        <div class="status-strip wrap" aria-label="Status arsip">
+          <span>BERKAS HTML: 1</span>
+          <span>ASET TERCATAT: 9</span>
+          <span>PENANDA WAKTU: 4</span>
+        </div>
+
+        <header class="kredit__hero wrap">
+          <div>
+            <p class="label">[ KODE KATEGORI: KURATORIAL ]</p>
+            <h2 class="kredit__title">KURASI &amp; KREDIT</h2>
+            <p class="kredit__line">ONTOLOGI TENUN &amp; KOMPUTASI // SEKSI DOKUMENTASI</p>
+          </div>
+          <div class="kredit__index">
+            <p class="kredit__index-head">INDEX STATUS</p>
+            <dl>
+              <div><dt>Catatan kurasi</dt> <dd>1</dd></div>
+              <div><dt>Penanda waktu</dt> <dd>4</dd></div>
+              <div><dt>Aset tercatat</dt> <dd>9</dd></div>
+            </dl>
+          </div>
+        </header>
+
+        <div class="kredit__body wrap">
+          <div class="kredit__main">
+            <section class="kredit__section" aria-labelledby="seksi-01">
+              <p class="label">SEKSI 01</p>
+              <h2 class="kredit__heading" data-split id="seksi-01">Catatan Kurasi: Nalar Analogi &amp; Batas Historis</h2>
+              <blockquote class="kredit__quote" data-anim="fade">
+                <p>“Komputer pertama ditenun, bukan ditulis.”</p>
+                <footer>Manifesto MenenunSejarah</footer>
+              </blockquote>
+              <p class="kredit__lede">Kalimat di Beranda itu sengaja provokatif. Ia adalah analogi dan provokasi kuratorial, bukan klaim bahwa alat tenun Nusantara adalah komputer dalam arti teknis, dan bukan klaim siapa yang lebih dulu.</p>
+              <p>Analoginya bisa diperiksa. Pada setiap baris tenun, penenun memutuskan helai lungsi mana yang diangkat dan mana yang diturunkan. Dua keadaan, diulang baris demi baris, menghasilkan pola yang bisa dicatat dan diulang. Itulah yang kami sebut sandi: informasi yang disimpan dalam keputusan naik dan turun.</p>
+              <p>Tonggak sejarah yang kami pakai adalah alat tenun Jacquard (≈ 1804), yang membaca kartu berlubang untuk mengatur lungsi secara otomatis. Gagasan kartu itu kemudian dipinjam untuk Mesin Analitis Charles Babbage. Ada Lovelace menulis pada 1843 bahwa mesin itu “menenun pola aljabar, seperti alat tenun Jacquard menenun bunga dan daun” (terjemahan bebas dari catatannya).</p>
+              <aside class="kredit__note" aria-label="Penegasan">
+                <p><strong>Penegasan.</strong> Tahun bertanda ≈ adalah perkiraan. Kami tidak menyatakan tenun Nusantara memakai kartu berlubang, dan tidak menautkan tenun gedogan dengan tahun 1804. Pola biner buatan pengunjung di Playground tidak diberi nama motif tradisional.</p>
+              </aside>
+            </section>
+
+            <section class="kredit__section" aria-labelledby="seksi-03">
+              <p class="label">SEKSI 03</p>
+              <h2 class="kredit__heading" data-split id="seksi-03">Matriks Atribusi Arsip</h2>
+              <div class="kredit__table-wrap" tabindex="0" role="region" aria-label="Tabel atribusi, dapat digulir">
+                <table class="kredit__table">
+                  <thead>
+                    <tr><th scope="col">Aset</th><th scope="col">Sumber</th><th scope="col">Lisensi</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Ilustrasi kartu jejak (10 tekstur tenun, SVG)</td><td>Ilustrasi generatif, dibuat khusus untuk proyek ini</td><td><span class="chip">Karya orisinal</span></td></tr>
+                    <tr><td>Skematik alat tenun terurai (SVG)</td><td>Digambar khusus untuk proyek ini</td><td><span class="chip">Karya orisinal</span></td></tr>
+                    <tr><td>Benang sepanjang situs (SVG generatif)</td><td>Digambar oleh kode proyek ini</td><td><span class="chip">Karya orisinal</span></td></tr>
+                    <tr><td>Matriks motif 12 × 12</td><td>Dibuat pengunjung, disimpan di perangkatnya</td><td><span class="chip">Milik pengunjung</span></td></tr>
+                    <tr><td>Fon Anton</td><td>The Anton Project Authors</td><td><span class="chip">SIL OFL 1.1</span></td></tr>
+                    <tr><td>Fon Playfair Display</td><td>The Playfair Display Project Authors</td><td><span class="chip">SIL OFL 1.1</span></td></tr>
+                    <tr><td>Fon JetBrains Mono</td><td>The JetBrains Mono Project Authors</td><td><span class="chip">SIL OFL 1.1</span></td></tr>
+                    <tr><td>GSAP 3.12.5 + ScrollTrigger</td><td>GreenSock, gsap.com</td><td><span class="chip">GSAP Standard License</span></td></tr>
+                    <tr><td>Lenis 1.1.13 (smooth scroll)</td><td>darkroom.engineering</td><td><span class="chip">MIT</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="kredit__moral">Semua karya penenun tetap melekat pada komunitas adat yang bersangkutan.</p>
+              <a class="btn btn--outline" href="assets/data/credits.json" download>[ UNDUH MANIFEST (.JSON) ]</a>
+            </section>
+          </div>
+
+          <section class="kredit__side" aria-labelledby="seksi-02">
+            <p class="label">SEKSI 02</p>
+            <h2 class="kredit__heading" data-split id="seksi-02">Kontinuum Nalar Biner</h2>
+            <ol class="timeline" data-anim="stagger">
+              <li class="timeline__item">
+                <p class="timeline__mark">JAUH SEBELUM 1804</p>
+                <h3 class="timeline__title">Tenun Gedogan Nusantara</h3>
+                <p>Penenun menyimpan pola di ingatan dan gerak tangan, lalu mewariskannya antargenerasi. Kami belum mencantumkan tahun karena belum ada sumber tertulis yang kami verifikasi.</p>
+                <p class="timeline__source">SUMBER: menunggu kurasi narasumber</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__mark">≈ 1804</p>
+                <h3 class="timeline__title">Mesin Tenun Jacquard</h3>
+                <p>Joseph Marie Jacquard (Lyon, Prancis) memperkenalkan pembacaan kartu berlubang untuk mengendalikan pola tenun secara otomatis.</p>
+                <p class="timeline__source">SUMBER: <a class="link" href="https://www.britannica.com/technology/Jacquard-loom" rel="noopener noreferrer" target="_blank">Encyclopaedia Britannica, “Jacquard loom”</a></p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__mark">1843</p>
+                <h3 class="timeline__title">Algoritma Pertama Ada Lovelace</h3>
+                <p>Mesin Analitis Babbage dirancang memakai logika kartu gaya Jacquard; Lovelace menulis program yang sering disebut sebagai algoritma pertama.</p>
+                <p class="timeline__source">SUMBER: <a class="link" href="https://www.britannica.com/biography/Ada-Lovelace" rel="noopener noreferrer" target="_blank">Encyclopaedia Britannica, “Ada Lovelace”</a></p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__mark">2026</p>
+                <h3 class="timeline__title">MenenunSejarah: Repositori Pusaka</h3>
+                <p>Situs statis terbuka yang merekonstruksi nalar komputasional tenun.</p>
+                <p class="timeline__source">SUMBER: situs ini, kode terbaca tanpa build</p>
+              </li>
+            </ol>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer wrap" data-tone="void">
+    <p class="site-footer__wordmark">MenenunSejarah</p>
+    <p class="site-footer__desc">Eksplorasi kuratorial atas genealogi transmisi sinyal biner Nusantara. Melestarikan nalar komputasi aksara dan artefak ritmis peradaban leluhur melalui telemetri mesin preservasi.</p>
+    <dl class="site-footer__telemetry">
+      <div><dt>KLASIFIKASI:</dt> <dd>PUSAKA TEKNO-HISTORIK</dd></div>
+      <div><dt>BERKAS HTML:</dt> <dd>1</dd></div>
+      <div><dt>PUSTAKA PIHAK KETIGA:</dt> <dd>3 (GSAP · ScrollTrigger · Lenis)</dd></div>
+      <div><dt>PROSES BUILD:</dt> <dd>TIDAK ADA</dd></div>
+    </dl>
+    <div class="site-footer__row">
+      <p>© 2026 MenenunSejarah: MESIN BINER PERTAMA · TECHTOPIA VOL. 2</p>
+    </div>
+  </footer>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+          integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+          integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+  <script defer src="js/core/namespace.js"></script>
+  <script defer src="js/core/motion.js"></script>
+  <script defer src="js/core/smooth-scroll.js"></script>
+  <script defer src="js/core/config.js"></script>
+  <script defer src="js/core/storage.js"></script>
+  <script defer src="js/core/header.js"></script>
+  <script defer src="js/core/router.js"></script>
+  <script defer src="js/features/boot-sequence.js"></script>
+  <script defer src="js/features/cursor-trail.js"></script>
+  <script defer src="js/features/home-sections.js"></script>
+  <script defer src="js/features/thread.js"></script>
+  <script defer src="js/features/exploded-view.js"></script>
+  <script defer src="js/features/weave-grid.js"></script>
+  <script defer src="js/features/certificate.js"></script>
+  <script defer src="js/features/magnetic.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+/* Visual tetap menemani bacaan; artikel tidak dijadikan panel tersembunyi. */
+.arsip {
+  --arsip-visual-height: 34svh;
+  --arsip-sticky-top: env(safe-area-inset-top, 0px);
+}
+
+.arsip .arsip__visual {
+  position: sticky;
+  top: var(--arsip-sticky-top);
+  z-index: var(--z-trail);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  align-self: start;
+  height: var(--arsip-visual-height);
+  background: var(--c-paper);
+}
+
+.arsip .arsip__eyebrow {
+  margin-bottom: var(--sp-2);
+  font-size: var(--fs-label);
+  line-height: 1.35;
+}
+
+.arsip .loom {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-height: 0;
+  padding: var(--sp-2);
+}
+
+.arsip .loom__svg {
+  height: 100%;
+  min-height: 0;
+  overflow: visible;
+}
+
+.arsip .loom__label,
+.arsip .loom__part.is-highlight .loom__label {
+  fill: transparent;
+}
+
+.arsip .loom__labels {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  clip-path: none;
+  white-space: normal;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--sp-1) var(--sp-2);
+  font-family: var(--f-mono);
+  font-size: var(--fs-label);
+  line-height: 1.25;
+  color: var(--c-void);
+}
+
+.arsip .loom__html-label.is-active {
+  font-weight: 700;
+  color: var(--c-red);
+}
+
+.arsip .arsip__markers {
+  display: flex;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-4);
+}
+
+.arsip .arsip__marker {
+  color: var(--c-void);
+  letter-spacing: normal;
+}
+
+.arsip .part {
+  scroll-margin-top: calc(var(--arsip-visual-height) + var(--arsip-sticky-top) + var(--sp-4));
+}
+
+.arsip .part__title {
+  font-size: clamp(1.625rem, 5.5vw, 3rem);
+  line-height: 1.05;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.arsip .part__register {
+  font-size: var(--fs-body);
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+
+.arsip .arsip__visual .arsip__year {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}
+
+.arsip .arsip__visual .arsip__year-num {
+  font-size: clamp(1.5rem, 4svh, 2.25rem);
+  line-height: 1;
+}
+
+.arsip .arsip__visual .arsip__year-note {
+  margin-top: 0;
+  font-size: var(--fs-label);
+  line-height: 1.25;
+}
+
+.arsip .arsip__cta {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  /* Nilai desktop mengikuti pages.css, termasuk mode pin yang sudah ada. */
+  .arsip .arsip__visual {
+    position: static;
+    top: auto;
+    z-index: auto;
+    display: block;
+    grid-template-rows: none;
+    align-self: auto;
+    height: auto;
+    background: transparent;
+  }
+
+  .arsip .arsip__eyebrow {
+    margin-bottom: var(--sp-3);
+    line-height: var(--lh-body);
+  }
+
+  .arsip .loom {
+    display: block;
+    grid-template-rows: none;
+    min-height: auto;
+    padding: var(--sp-3);
+  }
+
+  .arsip .loom__svg {
+    height: auto;
+    min-height: auto;
+  }
+
+  .arsip .loom__label {
+    fill: var(--c-void);
+  }
+
+  .arsip .loom__part.is-highlight .loom__label {
+    fill: var(--c-red);
+  }
+
+  /* Label SVG desktop tetap utuh; label HTML masih tersedia bagi pembaca layar. */
+  .arsip .loom__labels {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .arsip .arsip__markers {
+    display: none;
+    gap: var(--sp-2) var(--sp-3);
+    margin-bottom: var(--sp-5);
+  }
+
+  .arsip.is-staged .arsip__markers {
+    display: flex;
+    margin-bottom: var(--sp-4);
+  }
+
+  .arsip .arsip__marker {
+    color: var(--c-ash);
+    letter-spacing: var(--ls-label);
+  }
+
+  .arsip .arsip__marker[aria-current="true"] {
+    color: var(--c-void);
+  }
+
+  .arsip .part {
+    scroll-margin-top: 0;
+  }
+
+  .arsip .part__title {
+    font-size: var(--fs-h1);
+    line-height: 0.95;
+  }
+
+  .arsip .part__register {
+    font-size: var(--fs-code);
+    letter-spacing: 0.06em;
+    overflow-wrap: normal;
+  }
+
+  .arsip .arsip__cta {
+    max-width: none;
+    white-space: nowrap;
+    text-align: center;
+  }
+}
+
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) {
+  .arsip .arsip__marker:hover {
+    color: var(--c-void);
+  }
+}

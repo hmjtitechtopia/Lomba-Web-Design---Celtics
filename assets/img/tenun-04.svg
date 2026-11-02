@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 240" width="180" height="240">
+  <title>Lajur ikat</title>
+  <defs>
+
+  </defs>
+  <rect x="0" y="0" width="14" height="240" fill="#D91604"/>
+  <rect x="14" y="0" width="4" height="240" fill="#0D0D0D"/>
+  <rect x="18" y="0" width="22" height="240" fill="#F5F2EB"/>
+  <rect x="40" y="0" width="6" height="240" fill="#C4A661"/>
+  <rect x="46" y="0" width="30" height="240" fill="#D91604"/>
+  <rect x="76" y="0" width="4" height="240" fill="#0D0D0D"/>
+  <rect x="80" y="0" width="18" height="240" fill="#F5F2EB"/>
+  <rect x="98" y="0" width="10" height="240" fill="#0D0D0D"/>
+  <rect x="108" y="0" width="26" height="240" fill="#D91604"/>
+  <rect x="134" y="0" width="6" height="240" fill="#C4A661"/>
+  <rect x="140" y="0" width="24" height="240" fill="#F5F2EB"/>
+  <rect x="164" y="0" width="16" height="240" fill="#D91604"/>
+</svg>

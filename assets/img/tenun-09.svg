@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 240" width="180" height="240">
+  <title>Serat makro</title>
+  <defs>
+
+  </defs>
+  <rect width="180" height="240" fill="#FCF9F2"/>
+  <path d="M10 -10 C 28 50, -8 110, 10 170 S 28 230, 10 260" fill="none" stroke="#D91604" stroke-width="6" stroke-linecap="round"/>
+  <path d="M30 -10 C 48 50, 12 110, 30 170 S 48 230, 30 260" fill="none" stroke="#C4A661" stroke-width="4" stroke-linecap="round"/>
+  <path d="M50 -10 C 68 50, 32 110, 50 170 S 68 230, 50 260" fill="none" stroke="#D91604" stroke-width="6" stroke-linecap="round"/>
+  <path d="M70 -10 C 88 50, 52 110, 70 170 S 88 230, 70 260" fill="none" stroke="#D91604" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 -10 C 108 50, 72 110, 90 170 S 108 230, 90 260" fill="none" stroke="#C4A661" stroke-width="6" stroke-linecap="round"/>
+  <path d="M110 -10 C 128 50, 92 110, 110 170 S 128 230, 110 260" fill="none" stroke="#D91604" stroke-width="4" stroke-linecap="round"/>
+  <path d="M130 -10 C 148 50, 112 110, 130 170 S 148 230, 130 260" fill="none" stroke="#D91604" stroke-width="6" stroke-linecap="round"/>
+  <path d="M150 -10 C 168 50, 132 110, 150 170 S 168 230, 150 260" fill="none" stroke="#C4A661" stroke-width="4" stroke-linecap="round"/>
+  <path d="M170 -10 C 188 50, 152 110, 170 170 S 188 230, 170 260" fill="none" stroke="#D91604" stroke-width="6" stroke-linecap="round"/>
+</svg>
